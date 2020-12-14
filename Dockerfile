@@ -2,7 +2,7 @@
 FROM node:12
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /
 
 # Copy app dependencies
 COPY package.json .
@@ -15,4 +15,4 @@ COPY . .
 
 # Run the solution. Your package.json should have start script that invokes
 # your code
-CMD ["npm", "start"]
+ENTRYPOINT [ "npm",  "start" ]
